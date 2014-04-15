@@ -5,11 +5,16 @@ var app = express();
 
 app.use(logfmt.requestLogger());
 
-app.set('title', 'Tips @ Computerlove');
-app.get('title');
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
 
-app.get('/', function(req, res) {
+/*app.get('/', function(req, res) {
   res.send('Have some Computerlove!');
+});*/
+
+app.get('/about', function (req, res)
+{
+    res.render('index.html');
 });
 
 var port = Number(process.env.PORT || 5000);
