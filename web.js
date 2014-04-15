@@ -5,6 +5,8 @@ var app = express();
 
 app.use(logfmt.requestLogger());
 
+app.set('title', 'Tips @ Computerlove');
+
 app.get('/', function(req, res) {
   res.send('Have some Computerlove!');
 });
