@@ -12,7 +12,7 @@ app.engine('html', require('ejs').renderFile);
   res.send('Have some Computerlove!');
 });*/
 
-app.get('/about', function (req, res)
+app.get('/', function (req, res)
 {
     res.render('index.html');
 });
