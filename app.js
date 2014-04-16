@@ -1,12 +1,16 @@
-/*
- * Module dependencies
- */
-var express = require('express')
+/*var express = require('express')
   , stylus = require('stylus')
-  , nib = require('nib')
+  , nib = require('nib')*/
+	
+var express = require("express");
+var logfmt = require("logfmt");
+var app = express();
 
+app.use(logfmt.requestLogger());
 
-var app = express()
+app.get('/', function(req, res) {
+  res.send('Our week @ Code. Coming soon...');
+});
 
 /*function compile(str, path) {
   return stylus(str)
@@ -29,10 +33,5 @@ app.get('/', function (req, res) {
   { title : 'Week @ Code' }
   )
 })*/
-
-app.get('/', function(req, res) {
-  res.send('Our week @ Code. Coming soon...');
-});
-
 
 app.listen(3000)
