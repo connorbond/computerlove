@@ -8,7 +8,7 @@ var express = require('express')
 
 var app = express()
 
-function compile(str, path) {
+/*function compile(str, path) {
   return stylus(str)
     .set('filename', path)
     .use(nib());
@@ -28,6 +28,11 @@ app.get('/', function (req, res) {
   res.render('index',
   { title : 'Week @ Code' }
   )
-})
+})*/
+
+app.get('/', function(req, res) {
+  res.send('Our week @ Code. Coming soon...');
+});
+
 
 app.listen(3000)
