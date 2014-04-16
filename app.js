@@ -1,14 +1,19 @@
-// Module dependencies
+/*
+ * Module dependencies
+ */
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
-  
+
+
 var app = express()
+
 function compile(str, path) {
   return stylus(str)
     .set('filename', path)
-    .use(nib())
+    .use(nib());
 }
+
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
 app.use(express.logger('dev'))
@@ -24,4 +29,5 @@ app.get('/', function (req, res) {
   { title : 'Home' }
   )
 })
+
 app.listen(3000)
