@@ -1,46 +1,52 @@
-/*var express = require('express')
-  , stylus = require('stylus')
-  , nib = require('nib')*/
-	
-var express = require("express");
-var logfmt = require("logfmt");
-var app = express();
-
 //SIMPLE MESSAGE
-/*app.use(logfmt.requestLogger());
+/*
 
-app.get('/', function(req, res) {
-  res.send('Our week @ Code. Coming soon...');
-});
+	var express = require("express");
+	var logfmt = require("logfmt");
+	var app = express();
 
-//app.listen(3000)
+	app.use(logfmt.requestLogger());
+
+	app.get('/', function(req, res) {
+		res.send('Our week @ Code. Coming soon...');
+	});
+
+	//app.listen(3000)
 
 */
 
 //FULL SITE
-function compile(str, path) {
-  return stylus(str)
-    .set('filename', path)
-    .use(nib());
-}
 
-app.set('views', __dirname + '/views')
-app.set('view engine', 'jade')
-app.use(express.logger('dev'))
-app.use(stylus.middleware(
-  { src: __dirname + '/public'
-  , compile: compile
-  }
-))
-app.use(express.static(__dirname + '/public'))
+	var express = require('express')
+		, logger = require('morgan')
+		, stylus = require('stylus')
+		, nib = require('nib')
+		
+	var app = express();
+		
+	function compile(str, path) {
+		return stylus(str)
+			.set('filename', path)
+			.use(nib());
+	}
 
-app.get('/', function (req, res) {
-  res.render('index',
-  { title : 'Week @ Code' }
-  )
-})
+	app.set('views', __dirname + '/views')
+	app.set('view engine', 'jade')
+	app.use(logger)
+	app.use(stylus.middleware(
+		{ src: __dirname + '/public'
+		, compile: compile
+		}
+	))
+	app.use(express.static(__dirname + '/public'))
 
-var port = Number(process.env.PORT || 5000);
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+	app.get('/', function (req, res) {
+		res.render('index',
+		{ title : 'Week @ Code' }
+		)
+	})
+
+	var port = Number(process.env.PORT || 3000);
+	app.listen(port, function() {
+		console.log("Listening on " + port);
+	});
