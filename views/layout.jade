@@ -1,15 +1,24 @@
 !!!5
 html
-  head
-    title Week @ Code | #{title} 
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    header
-      h1 Our Week @ Code
-    .container
-      .main-content
-        block content
-      .sidebar
-        block sidebar
-    footer
-      p Running on Heroku with node.js, Express, Jade and Stylus. Auto-Deployed by Drone.io. Impressed? :p 
+	head
+		title Week @ Code | #{title} 
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='shortcut icon', href='favicon.png')
+	body
+		header
+			img 
+			h1 Our Week @ Code
+		.container
+			.main-content
+				block content
+			.sidebar
+				block sidebar
+		footer
+			:markdown
+				Running on [Heroku](http://heroku.com) 
+				with help from [node.js](http://nodejs.org/), 
+				[Express](http://expressjs.com/), 
+				[Jade](http://jade-lang.com/) (with a dash of [Markdown](https://daringfireball.net/projects/markdown/)) 
+				& [Stylus](http://learnboost.github.io/stylus/). 
+				Auto-Deployed by [Drone.io](https://drone.io) 
+				from [GitHub](https://github.com/connorbond/computerlove/). Impressed? :p 
