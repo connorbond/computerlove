@@ -110,6 +110,10 @@ body {
 }
 a {
   color: #ef4135;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 header {
   height: 26px;
@@ -148,6 +152,7 @@ header a:hover {
   width: 960px;
   margin: 50px auto;
   overflow: hidden;
+  padding: 0px 30px;
 }
 .main-content {
   float: left;
@@ -155,6 +160,11 @@ header a:hover {
 }
 .main-content p {
   margin-bottom: 5px;
+}
+.main-content h2 {
+  color: #ef4135;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .sidebar {
   float: right;
@@ -190,6 +200,6 @@ footer {
   width: 960px;
   margin: 50px auto;
   border-top: 1px dotted #ccc;
-  padding-top: 10px;
   font-size: 13px;
+  padding: 10px 30px 0px;
 }
