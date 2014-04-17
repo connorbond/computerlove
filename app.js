@@ -6,13 +6,19 @@ var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
 
-app.use(logfmt.requestLogger());
+//SIMPLE MESSAGE
+/*app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
   res.send('Our week @ Code. Coming soon...');
 });
 
-/*function compile(str, path) {
+//app.listen(3000)
+
+*/
+
+//FULL SITE
+function compile(str, path) {
   return stylus(str)
     .set('filename', path)
     .use(nib());
@@ -32,9 +38,7 @@ app.get('/', function (req, res) {
   res.render('index',
   { title : 'Week @ Code' }
   )
-})*/
-
-//app.listen(3000)
+})
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
