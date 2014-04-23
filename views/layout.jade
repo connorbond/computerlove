@@ -1,4 +1,4 @@
-!!!5
+doctype
 html
 	head
 		title Week @ Code | #{title} 
@@ -17,12 +17,13 @@ html
 			img(src="/img/logo.png", title="Code", href='http://codecomputerlove.com/')
 			h1 Our Week @ Code
 			h3
-				a(href='https://twitter.com/connorbond') @connorbond
-				|
+				a(href='https://twitter.com/connorbond') @connorbond |
 				a(href='https://twitter.com/bethhie') @bethhie
 		.container
 			.main-content
 				block intro
+				block a/b
+				block quotes
 
 			.sidebar
 				block sidebar
@@ -35,3 +36,5 @@ html
 				& [Stylus](http://learnboost.github.io/stylus/). 
 				Auto-Deployed by [Drone.io](https://drone.io) 
 				from [GitHub](https://github.com/connorbond/computerlove/). Impressed? :p 
+
+		script. src="http://code.jquery.com/jquery-1.7.1.min.js"
