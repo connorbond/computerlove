@@ -121,7 +121,11 @@ hr {
   border-bottom: 1px solid #ddd;
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 26px;
+  width: 100%;
   padding: 20px;
   color: #fff;
   font-size: 25px;
@@ -145,6 +149,7 @@ header h1 {
 header h3 {
   display: inline-block;
   float: right;
+  margin-right: 40px;
 }
 header a {
   color: #fff;
@@ -157,7 +162,7 @@ header a:hover {
   width: 960px;
   margin: 50px auto;
   overflow: hidden;
-  padding: 0px 30px;
+  padding: 50px 30px 0px 30px;
 }
 .main-content {
   float: left;
