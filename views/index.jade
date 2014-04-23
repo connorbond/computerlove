@@ -1,7 +1,5 @@
 extend layout
 
-
-
 block intro
 	h2 Welcome to Connor &amp; Beth's knowledge repo.
 	p Here's where all the cool tips &amp; tricks we have picked up on the way will go...
@@ -12,7 +10,7 @@ block a/b
 	p ^ A/B testing - of sorts :) ^
 
 block quotes
-	hr
+	hr(id='quotes')
 	h3 Quotes
 	h4 Snippets of wisdom we've picked up along the way...
 	p "The best thing you can do is make a decision" - Tony Foggett
@@ -20,7 +18,7 @@ block quotes
 	p "No idea is a bad idea. Just as no question is a silly question" - Rules set my Code Computerlove
 
 block tools
-	hr
+	hr(id='tools')
 	h3 Tools
 	h4 All the new toys we've had a play with, or want to in future...
 	p Git (&amp; Github)
@@ -41,7 +39,7 @@ block tools
 	p WCAG
 
 block plugins
-	hr
+	hr(id='plugins')
 	h3 Plugins
 	h4 Speed up that day with handy plugins...
 	p User-Agent Switcher
@@ -49,7 +47,7 @@ block plugins
 	p Window Resizer
 
 block git
-	hr
+	hr(id='git')
 	h3 Git Tips
 	h4 Connor's handy list for easy, Git-based japery...
 	p cd ~/&lt;dir_name&gt;
@@ -67,7 +65,7 @@ block git
 	p config --global &lt;variable&gt;
 
 block links
-	hr
+	hr(id='links')
 	h3 Links
 	h4 Some links which we found of interest to us whilst in the office...
 	p https://www.woodlandtrust.org.uk
@@ -82,7 +80,7 @@ block links
 	p http://code-tech-radar.herokuapp.com/
 
 block sessions
-	hr
+	hr(id='sessions')
 	h3 Sessions
 	h4 Just some of the sessions which we managed to sneak in to and learn rather a lot...
 	p Code Computerlove Induction
@@ -102,10 +100,9 @@ block sidebar
 	.widget
 		h1 Categories
 		ul
-			li: a Quotes
-			li: a Tips
-			li: a Links
-			li: a Tools
-			li: a Plugins
-			li: a Sessions
-			li: a Git Help
+			li: a(onclick="$('html, body').animate({scrollTop: ($('#quotes').offset().top)-65}, 1000);") Quotes
+			li: a(onclick="$('html, body').animate({scrollTop: ($('#links').offset().top)-65}, 1000);") Links
+			li: a(onclick="$('html, body').animate({scrollTop: ($('#tools').offset().top)-65}, 1000);") Tools
+			li: a(onclick="$('html, body').animate({scrollTop: ($('#plugins').offset().top)-65}, 1000);") Plugins
+			li: a(onclick="$('html, body').animate({scrollTop: ($('#sessions').offset().top)-65}, 1000);") Sessions
+			li: a(onclick="$('html, body').animate({scrollTop: ($('#git').offset().top)-65}, 1000);") Git Help
