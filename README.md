@@ -1,4 +1,4 @@
-computerlove
-============
+Week of Computerlove
+====================
 
-All our fun @ Code over the week
+All our fun & learning @ Code, over the week placement.
